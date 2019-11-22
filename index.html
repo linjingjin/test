@@ -1,31 +1,569 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>我的统计</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/layout.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>云数据中心运营监控系统</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="pd20">
-        <div class="schedual-box01">
-            <dl>
-                <dt>快速管理排班</dt>
-                <dd><a href="">· excel 快速导入员工排班</a></dd>
-                <dd><a href="">· 线上直接排班</a></dd>
-                <dd><a href="">· 修改考勤规则</a></dd>
-            </dl>
+<body class="cloud">
+  <div class="page">
+    <div class="c-left">
+      <div class="system-time" >
+        北京时间：
+        <span class="time"></span>
+      </div>
+      <div class="safe-box">
+        <div class="safe-gauge01">
+          <h4 class="title">本月可用性监测</h4>
+          <div id="chart-panel" style="width: 156px;height: 106px"></div>
         </div>
-        <div class="schedual-box02">
-            <dl>
-                <dt>考勤日报表、月报表</dt>
-                <dd><a href="">· 每日、每月自动汇总，生成报表</a></dd>
-                <dd><a href="">· 一键导出报表</a></dd>
-                <dd><a href="">· 报表打印</a></dd>
-            </dl>
+        <div class="safe-gauge01">
+          <h4 class="title">公有云安全指数</h4>
+          <div id="chart-panel01" style="width: 156px;height: 106px"></div>
         </div>
+      </div>
+      <div class="warning-box">
+        <h3 class="title">告警处理</h3>
+        <dl>
+          <dd>
+            <span>告警处理进度</span>
+            <em>93%</em>
+          </dd>
+          <dd>
+            <span>平均响应时长</span>
+            <em>2分钟</em>
+          </dd> 
+        </dl>
+        <div id="hy_pie01" style="width: 360px;height: 126px"></div>
+        <div id="hy_pie02" style="width: 360px;height: 126px"></div>
+        <div id="warning_line" style="width: 370px;height: 140px"></div>
+      </div>
+      <div class="order-box">
+        <h3 class="title">工单处理</h3>
+        <div class="order-info">
+          <div class="order-num">
+            <b></b>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="order-time">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>    
+        </div>  
+        <div class="order-total">
+          <dl>
+            <dt><span></span><i>总工单数</i></dt>
+            <dd>
+              <div class="li">
+                <span class="fs14"></span>
+                <span>云主机问题</span>
+              </div>
+              <div class="li">
+                <span class="fs14"></span>
+                <span>路由器问题</span>
+              </div>
+              <div class="li">
+                <span class="fs14"></span>
+                <span>云硬盘问题</span>
+              </div>
+              <div class="li">
+                <span class="fs14"></span>
+                <span>网络问题</span>
+              </div>
+              <div class="li">
+                <span class="fs14"></span>
+                <span>产品咨询</span>
+              </div>
+              <div class="li">
+                <span class="fs14"></span>
+                <span>其他</span>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </div>
     </div>
+    <div class="c-center">
+      <div class="city-data">
+        <div class="hy-map">
+          <div class="cloud-title">
+            <ul>
+              <li><i class="icon1"></i>已开通公有云节点</li>
+              <li><i class="icon2"></i>高速直线专线</li>
+              <li><i class="icon3"></i>已开通混合云节点</li>
+            </ul>
+          </div>  
+          <div class="city">
+            <div class="city_bar chengdu">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>成都</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar wuhan">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>武汉</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar guangzhou">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>广州</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar shenzhen">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>深圳</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar xianggang">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>香港</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar beijing">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>北京</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar xiamen">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>厦门</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar suzhou">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>苏州</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar huaian">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>淮安</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar shanghai">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>上海</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <div class="city_bar meizhou">  
+              <div class='dot'></div>
+              <div class="bar">
+                <span>美洲</span>
+                <div class="img"><img src="images/bar-bg.png"></div>
+              </div>
+            </div>
+            <!-- 公有云 混合云 -->
+            <div class="city_bar wuhan-top">  
+              <div class='dot mix'></div>
+            </div>
+            <div class="city_bar beijing-bottom">  
+              <div class='dot mix'></div>
+            </div>
+            <div class="city_bar beijing-right">  
+              <div class='dot mix'></div>
+            </div>
+            <div class="city_bar suzhou-top">  
+              <div class='dot mix'></div>
+            </div>
+            <div class="city_bar suzhou-left">  
+              <div class='dot mix'></div>
+            </div>
+            <div class="city_bar suzhou-bottom">  
+              <div class='dot mix'></div>
+            </div>
+            <div class="city_bar xiamen-right">  
+              <div class='dot mix'></div>
+            </div>
+          </div>
+          <div class="ani"></div>
+          <div class="useful">
+            <div class=" third city_bar3 cheng-d ">  
+              <div class="item">
+                <div class="use left ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-left.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 wu-h ">  
+               <div class="item">
+                <div class="use left ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-left.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 guang-z ">  
+               <div class="item">
+                <div class="use left ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-left.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 shen-z ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 xiang-g ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 xia-m ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 bei-j ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 su-z ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 huai-a ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 shang-h ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar3 mei-z ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>可用性</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/third-flag-right.png"></div>
+              </div>
+            </div>
+          </div>
+          <div class="useful">
+            <div class="third city_bar4 cheng-d ">  
+              <div class="item">
+                <div class="use left ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-left.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 wu-h ">  
+               <div class="item">
+                <div class="use left ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-left.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 guang-z ">  
+               <div class="item">
+                <div class="use left ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-left.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 shen-z ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 xiang-g ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 xia-m ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 bei-j ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 su-z ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 huai-a ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 shang-h ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-right.png"></div>
+              </div>
+            </div>
+            <div class="third city_bar4 mei-z ">  
+               <div class="item right">
+                <div class="use ">
+                  <span>告警数</span>
+                  <span></span>
+                </div>
+                <div class="flag"><img src="images/four-flag-right.png"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cloud-news">
+          <div class="bxslider"></div>
+        </div>
+      </div>
+      <div class="line-status">
+        <div class="high-status">
+          <div class="status-title">高速专线状态</div>
+          <div class="high-list">
+            <dl>
+              <dt>苏州~北京</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+            <dl>
+              <dt>苏州~广州</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+            <dl>
+              <dt>北京~广州</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+          </div>
+        </div>
+        <div class="mixed-cloud">
+          <div class="status-title">混合云连通状态</div>
+          <div class="high-list">
+            <dl>
+              <dt>武汉~中金数据</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+            <dl>
+              <dt>北京~伟东集团</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+            <dl>
+              <dt>北京~天津赞普</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+          </div>
+          <div class="high-list">
+            <dl>
+              <dt>苏州~苏中建设集团</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+            <dl>
+              <dt>苏州~无锡地铁</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+            <dl>
+              <dt>苏州~中国声谷</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+          </div>
+          <div class="high-list">
+            <dl>
+              <dt>厦门~泉州云谷</dt>
+              <dd><span>专线状态</span><em></em><i></i></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-right">
+      <div class="system-time pr20 tar" >
+        美国时间：
+        <span class="usa-time"></span>
+      </div>
+      <div class="cloud-local">
+        <dl class="title">
+          <dt>数据中心</dt>
+          <dd>计算</dd>
+          <dd>存储</dd>
+          <dd>云服务</dd>
+          <dd>网络</dd>
+        </dl>
+        <div class="cloud-item">
+          <div class="region">华北</div>
+          <div class="item-bg"></div>
+          <ul>
+            <li><span>北京</span><em>正常</em><em>正常</em><em>正常</em><em></em></li>
+          </ul>
+        </div>
+        <div class="cloud-item">
+          <div class="region">华中</div>
+          <div class="item-bg"></div>
+          <ul>
+            <li><span>武汉</span><em>正常</em><em>正常</em><em>正常</em><em>正常</em></li>
+          </ul>
+        </div>
+        <div class="cloud-item">
+          <div class="region">华东</div>
+          <div class="item-bg"></div>
+          <ul>
+            <li><span>苏州</span><em>正常</em><em>正常</em><em>正常</em><em>正常</em></li>
+            <li><span>上海</span><em>正常</em><em>正常</em><em>正常</em><em>正常</em></li>
+            <li><span>厦门</span><em>正常</em><em>正常</em><em>正常</em><em></em></li>
+            <li><span>淮安</span><em>正常</em><em>正常</em><em>正常</em><em>正常</em></li>
+          </ul>
+        </div>
+        <div class="cloud-item">
+          <div class="region">华南</div>
+          <div class="item-bg"></div>
+          <ul>
+            <li><span>广州</span><em>正常</em><em>正常</em><em>正常</em><em></em></li>
+            <li><span>深圳1</span><em>正常</em><em>正常</em><em>正常</em><em></em></li>
+            <li><span>深圳2</span><em>正常</em><em>正常</em><em>正常</em><em>正常</em></li>
+          </ul>
+        </div>
+        <div class="cloud-item">
+          <div class="region">西南</div>
+          <div class="item-bg"></div>
+          <ul>
+            <li><span>成都</span><em>正常</em><em>正常</em><em>正常</em><em></em></li>
+          </ul>
+        </div>
+        <div class="cloud-item">
+          <div class="region">亚太</div>
+          <div class="item-bg"></div>
+          <ul>
+            <li><span>香港1</span><em>正常</em><em>正常</em><em>正常</em><em>正常</em></li>
+            <li><span>香港2</span><em>正常</em><em>正常</em><em>正常</em><em>正常</em></li>
+            <li><span>香港3</span><em>正常</em><em>正常</em><em>正常</em><em>正常</em></li>
+          </ul>
+        </div>
+        <div class="cloud-item">
+          <div class="region">美洲</div>
+          <div class="item-bg"></div>
+          <ul>
+            <li><span>洛杉矶</span><em>正常</em><em>正常</em><em>正常</em><em></em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="attack-overview">
+        <h3 class="title">攻击概览</h3>
+        <div class="attack-info">
+          <div class="attack-box1">
+            <span>今日受到攻击</span>
+            <em></em>
+          </div>  
+          <div class="attack-box1">
+            <span>被攻击资产</span>
+            <em></em>
+          </div>
+          <div class="attack-box1">
+            <span>攻击拦截率</span>
+            <em class="success"></em>
+          </div>
+        </div>  
+        <div id="hy_pie03" style="width: 360px;height: 148px"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jQuery-2.1.4.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src='js/echarts.min.js'></script>
+  <script src='js/gauge.js'></script>
+  <script src='js/hy_pie.js'></script>
+  <script src='js/warning_line.js'></script>
+  <script src='js/order_processing.js'></script>
+  <script src='js/network_line.js'></script>
+  <script src='js/mySlider.js'></script>
+  <script src='js/cloud_state.js'></script>
+  <script src='js/usable.js'></script>
+  <script src='js/renderDom.js'></script>
 </body>
 </html>

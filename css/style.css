@@ -1,0 +1,1651 @@
+@import 'http://at.alicdn.com/t/font_378128_vtwi9lwe7ma8xgvi.css';
+/*
+ * @Author: SiMeiyu 
+ * @Date: 2017-08-25 10:41:21 
+ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "PingFang MD";
+  src: url('font/PingFang Medium.TTF') format('truetype');
+}
+html,
+body,
+.page {
+  width: 1920px;
+  height: 1080px;
+  min-height: 768px;
+  min-width: 1366px;
+  font-family: "Microsoft YaHei","PingFang MD", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0;
+  clear: both;
+  zoom: 1;
+  visibility: hidden;
+}
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #9abed4;
+  // background: #151e2d url(../images/bg_body_1.png) center top no-repeat;
+}
+body.cloud {
+  background-image: url(../images/cloud-bg02.jpg);
+}
+em,i{font-style: normal;}
+.c-left{
+  width: 418px;
+  padding-left: 20px;
+  float: left;
+}
+.tar{
+  text-align: right;
+}
+.pr20{padding-right: 20px;}
+.ov{overflow: hidden;}
+.system-time{
+  line-height: 33px;
+  font-size: 12px;
+  color: #fff;
+  height: 33px;
+}
+h3.title{
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 50px;
+}
+/***华云监控系统左边***/
+.safe-box{
+  width: 397px;
+  height: 179px;
+  background-image: url(../images/left01-bg.png);
+  display: flex;
+  padding:10px 16px;
+  justify-content: space-around;
+}
+h4.title{color: #fff;font-size: 14px;line-height: 40px; text-align:center;}
+.warning-box{
+  width: 397px;
+  height: 540px;
+  margin-top: 8px;
+  background-image: url(../images/left02-bg.png);
+  padding:11px 16px;
+}
+.warning-box dl{
+  height: 76px;
+}
+.warning-box dl dd{
+  float: left;
+  width: 50%;
+  padding:8px 0;
+  padding-left: 24px;
+  line-height: 30px;
+}
+.warning-box dl dd span{
+  color: #2481d5;
+  font-size: 14px;
+}
+.warning-box dl dd em{
+  display: block;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+.order-box{
+  width: 397px;
+  height: 293px;
+  margin-top: 8px;
+  background-image: url(../images/left03-bg.png);
+  padding:11px 16px;
+}
+.order-info{
+  height: 93px;
+}
+.order-info .order-num{
+  width: 188px;
+  float: left;
+  padding: 10px 16px;
+}
+.order-info .order-num b{
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  padding: 2px 0;
+  display: block;
+}
+.order-info .order-num > div{
+  color: #fff;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.order-info .order-time{
+  width: 175px;
+  float: left;
+  padding:16px 14px;
+}
+.order-info .order-time > div{
+  opacity: 0.6;
+  color: #fff;
+  line-height: 22px;
+  font-size: 14px;
+}
+.order-total{
+  height: 98px;
+  margin-top: 17px; 
+}
+.order-total dl{
+  width: 360px;
+  height: 100%;
+}
+.order-total dl dt{
+  float: left;
+  width: 90px;
+  text-align: center;
+}
+.order-total dl dt span{
+  color: #fff;
+  font-size: 24px;
+  display: block;
+  padding-top: 20px;
+}
+.order-total dl dt i{
+  font-style:normal;
+  font-style: 12px;
+  color: #fff;
+}
+
+.order-total dl dd{
+  width: 270px;
+  float: left;
+}
+.order-total dl dd div.li{
+  width: 90px;
+  float: left;
+  height: 49px;
+  padding-top: 8px;
+  text-align: center;
+}
+.order-total dl dd div.li span{
+  line-height: 20px;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+}
+.order-total dl dd div.li span.fs14{
+  font-size: 14px;
+}
+
+
+
+/***华云监控系统中间***/
+.c-center{
+  float: left;
+  width: 1067px;
+  padding-left: 20px;
+}
+.city-data{
+  width: 100%;
+  height: 767px;
+}
+
+.cloud-news{
+  height: 120px;
+  padding:0 16px;
+  padding-top: 14px;
+  overflow: hidden;
+  position: relative;
+}
+.bxslider{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 16px;
+  top: 14px;
+}
+.cloud-news .slide{
+  margin-bottom: 14px;
+  transition: all 1s linear;
+}
+.cloud-news .slide.new{
+  margin-top: -55px;
+}
+.cloud-news dl{
+  // margin-top: 14px;
+  padding-left: 32px;
+  background: url(../images/new-ico.png) no-repeat left top;
+}
+
+.cloud-news dl dt{
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  height: 22px;
+}
+.cloud-news dl dd{
+  color: #cccdd5;
+  font-size: 14px;
+}
+
+.line-status{
+  width: 100%;
+  padding:28px 0;
+  height: 293px;
+  background-image: url(../images/mid03-bg.png);
+}
+.high-status{
+  width: 256px;
+  float: left;
+  // padding:0 32px;
+}
+.status-title{
+  font-size: 18px;
+  color: #fff;
+  padding-left: 32px;
+  line-height: 40px;
+}
+.high-list{
+  float: left;
+  width: 256px;
+  padding-left: 32px;
+}
+.high-list dl{
+  height: 45px;
+  margin-top: 20px;
+}
+.high-list dl dt{
+  color: #cccdd5;
+  font-size: 14px;
+  height: 22px;
+}
+.high-list dl dd{
+  color: #cccdd5;
+  font-size: 14px;
+
+}
+.high-list dl dd span{
+  font-size: 12px;
+  display: inline-block;
+  margin-right: 30px;
+}
+.high-list dl dd em{ color: #11ad19; font-size: 12px; font-style:normal;display: inline-block;margin-right: 30px;}
+.high-list dl dd em.wave{ color: #cc6609; }
+.high-list dl dd i{ color: #cccdd5; font-size: 12px; font-style:normal;}
+
+.mixed-cloud{
+  float: left;
+}
+/***华云监控系统右边***/
+.c-right{
+  width: 417px;
+  float: right;
+  padding-right: 20px;
+}
+.cloud-local{
+  width:100%;
+  height: 746px;
+  padding-top: 72px;
+}
+.cloud-local dl.title{height: 30px; color: #fff;font-size: 14px;}
+.cloud-local dl.title dt{ width: 122px; float: left;}
+.cloud-local dl.title dd{ width: 60px; float: left;}
+.cloud-item{
+  display: flex;
+  margin-top: 18px;
+}
+.cloud-item .region{ width: 25px;color: #cccdd5;font-size: 14px; display: flex; align-items:center;}
+.cloud-item .item-bg{ width: 22px; border-left: #1b468c solid 1px; position: relative;}
+.cloud-item .item-bg:before{ position: absolute;width: 8px;height: 1px; background: #1b468c; content:''; top: 0;left: 0; }
+.cloud-item .item-bg:after{ position: absolute;width: 8px;height: 1px; background: #1b468c; content:''; bottom: 0;left: 0; }
+.cloud-item ul{ padding:3px 0;}
+.cloud-item ul li{ line-height: 28px; }
+.cloud-item ul li span{ line-height: 30px; color: #fff;font-size: 14px;font-weight: bold;display: inline-block;width: 75px; }
+.cloud-item ul li em{ color: #11ad19;display: inline-block;width: 60px;  white-space: nowrap;}
+.cloud-item ul li em.delay{ color: #ff7e00;}
+.cloud-item ul li em.exception{ color: #fe2f24;}
+
+
+.attack-overview{
+  width: 100%;
+  float: left;
+  height: 282px;
+  padding: 10px 16px;
+  background-image: url(../images/right02-bg.png);
+}
+.attack-info{
+  display: flex;
+  justify-content: space-around;
+
+}
+.attack-box1{
+  padding:10px 0;
+  line-height: 30px;
+}
+.attack-box1 span{
+  display: block;
+  color: #2481d5;
+}
+.attack-box1 em{
+  color: #ff7e00;
+  font-size: 16px;
+  font-weight: bold;
+}
+.attack-box1 em.success{color: #11ad19;}
+
+
+
+/***地图***/
+.hy-map{
+  // border: #f00 solid 1px;
+  position: relative;
+  height: 631px;
+}
+.cloud-title{
+  position: absolute;
+  left: 10px;
+  top: 195px;
+  // border:#f0f solid 1px;
+}
+.cloud-title li{
+  height: 32px;
+  font-size: 12px;
+  color: #b9b9bb;
+}
+.cloud-title li i{
+  margin-right: 10px;
+  display: inline-block;
+}
+.cloud-title li i.icon1{
+  width: 10px;
+  height: 10px;
+  border-radius:50%;
+  background: #0ff;
+}
+.cloud-title li i.icon2{
+  width: 10px;
+  height: 2px;
+  position: relative;
+  top: -4px;
+  background: #0ff;
+}
+.cloud-title li i.icon3{
+  width: 10px;
+  height: 10px;
+  border-radius:50%;
+  background: #bd9dff;
+}
+
+.city_bar{
+  position: absolute;
+}
+.third{
+  position: absolute;
+  width: 98px;
+  height: 100px;
+}
+.dot {
+  background: rgba(0,255,255,1);
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  position: relative;
+  transform: rotateX(45deg);
+  animation:scaleFn 2s linear 0s infinite normal;
+}
+.dot:before {
+  position: absolute;
+  content: '';
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: rgba(0,255,255,0.2);
+  top: -7px;
+  left: -8px;
+}
+.dot:after {
+  position: absolute;
+  content: '';
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0,255,255,0.07);
+  left: -16px;
+  top: -14px;
+}
+
+.dot.mix{
+  background: rgba(189,157,255,1);
+} 
+.dot.mix:before {
+  background: rgba(189,157,255,0.2);
+}
+.dot.mix:after {
+  background: rgba(189,157,255,0.07);
+}
+
+.bar{
+  color: #eee;
+  font-size: 12px;
+  position: absolute;
+  left: -6px;
+  bottom: 5px;
+  height: 40px;
+  overflow: hidden;
+  opacity: 0;
+}
+.bar span{
+  line-height: 24px;
+  white-space: nowrap;
+  transform: rotateZ(-7deg);
+  display: inline-block;
+}
+.bar .img{
+  text-align: center;
+}
+.ani{
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 290px;
+  top: 264px;
+  opacity: 0;
+  background: url(../images/long.png);
+  animation: run 5s steps(1, start) infinite;
+  -webkit-animation: run 5s steps(1, start) infinite;
+}
+.use{
+  padding-top: 17px;
+  width: 98px;
+  position: absolute;
+  z-index: 2;
+}
+.right .use{
+  width: 86px;
+} 
+.use span{
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #eee;
+}
+.flag{}
+.third .item{
+  height: 65px;
+  width: 98px; 
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  transform: rotateY(50deg);
+  transform-origin:84px 100%;
+  bottom:14px;
+  opacity: 0;
+  transition:all 3000ms ease 0ms;
+}
+.third .item.right{
+  transform-origin: 10px 100%;
+  transform: rotateY(-50deg);
+}
+.third .item.on{
+  opacity:1;
+  height: 80px;
+  transform: rotateY(0deg);
+}
+.third.wu-h .item.on{
+  height: 100px;
+}
+.third.shen-z .on{
+  height: 135px;
+}
+.third.xiang-g .on{
+  height: 90px;
+}
+.third.xia-m .on{
+  height: 60px;
+}
+.third.bei-j .on{
+  height: 115px;
+}
+.third.su-z .on{
+  height: 128px;
+}
+.third.huai-a .on{
+  height: 109px;
+}
+.third.shang-h .on{
+  height: 70px;
+}
+.cheng-d{
+  left: 185px;
+  top: 389px;
+}
+.wu-h{
+  left: 349px;
+  top: 389px;
+}
+.guang-z{
+  left: 340px;
+  top: 453px;
+}
+.bei-j{
+  left: 506px;
+  top: 328px;
+}
+.shen-z{
+  left: 443px;
+  top: 462px;
+}
+.xiang-g{
+  left: 463px;
+  top: 465px;
+}
+.xia-m{
+  left: 522px;
+  top: 447px;
+}
+.su-z{
+  left: 537px;
+  top: 379px;
+}
+.huai-a{
+  left: 553px;
+  top: 397px;
+}
+.shang-h{
+  left: 568px;
+  top: 397px;
+}
+.mei-z{
+  left: 892px;
+  top: 336px;
+}
+.chengdu{
+  left: 265px;
+  top: 471px;
+}
+.wuhan{
+  left: 429px;
+  top: 471px;
+}
+.guangzhou{
+  left: 420px;
+  top: 535px;
+}
+.shenzhen{
+  left: 450px;
+  top: 541px;
+}
+.xianggang {
+  left: 470px;
+  top: 547px;
+}
+.beijing{
+  left: 513px;
+  top: 407px;
+}
+.xiamen{
+  left: 528px;
+  top: 528px;
+}
+.suzhou{
+  left: 544px;
+  top: 460px;
+}
+.huaian{
+  left: 560px;
+  top: 480px;
+}
+.shanghai{
+  left: 575px;
+  top: 480px;
+}
+.meizhou{
+  left: 899px;
+  top: 415px;
+}
+.wuhan-top{
+  left: 440px;
+  top: 450px;
+}
+.beijing-bottom{
+  left: 524px;
+  top: 423px;
+}
+.beijing-right{
+  left: 569px;
+  top: 438px;
+}
+.suzhou-top{
+  left: 532px;
+  top: 452px;
+}
+.suzhou-left{
+  left: 500px;
+  top: 468px;
+}
+.suzhou-bottom{
+  left: 545px;
+  top: 473px;
+}
+
+.xiamen-right{
+  left: 544px;
+  top: 511px;
+}
+@keyframes scaleFn {
+  0% {
+    transform: scale(0.3) rotateX(55deg);
+  }
+
+  50% {
+    transform: scale(1) rotateX(55deg);
+  }
+  100% {
+    transform: scale(0.3) rotateX(55deg);
+  }
+}
+@keyframes run {
+  0.0000%{
+    background-position: 0 0px;
+  }
+  0.6135%{
+    background-position: 0 -400px;
+  }
+  1.2270%{
+    background-position: 0 -800px;
+  }
+  1.8405%{
+    background-position: 0 -1200px;
+  }
+  2.4540%{
+    background-position: 0 -1600px;
+  }
+  3.0675%{
+    background-position: 0 -2000px;
+  }
+  3.6810%{
+    background-position: 0 -2400px;
+  }
+  4.2945%{
+    background-position: 0 -2800px;
+  }
+  4.9080%{
+    background-position: 0 -3200px;
+  }
+  5.5215%{
+  background-position: 0 -3600px;
+  }
+  6.1350%{
+  background-position: 0 -4000px;
+  }
+  6.7485%{
+  background-position: 0 -4400px;
+  }
+  7.3620%{
+  background-position: 0 -4800px;
+  }
+  7.9755%{
+  background-position: 0 -5200px;
+  }
+  8.5890%{
+  background-position: 0 -5600px;
+  }
+  9.2025%{
+  background-position: 0 -6000px;
+  }
+  9.8160%{
+  background-position: 0 -6400px;
+  }
+  10.4294%{
+  background-position: 0 -6800px;
+  }
+  11.0429%{
+  background-position: 0 -7200px;
+  }
+  11.6564%{
+  background-position: 0 -7600px;
+  }
+  12.2699%{
+  background-position: 0 -8000px;
+  }
+  12.8834%{
+  background-position: 0 -8400px;
+  }
+  13.4969%{
+  background-position: 0 -8800px;
+  }
+  14.1104%{
+  background-position: 0 -9200px;
+  }
+  14.7239%{
+  background-position: 0 -9600px;
+  }
+  15.3374%{
+  background-position: 0 -10000px;
+  }
+  15.9509%{
+  background-position: 0 -10400px;
+  }
+  16.5644%{
+  background-position: 0 -10800px;
+  }
+  17.1779%{
+  background-position: 0 -11200px;
+  }
+  17.7914%{
+  background-position: 0 -11600px;
+  }
+  18.4049%{
+  background-position: 0 -12000px;
+  }
+  19.0184%{
+  background-position: 0 -12400px;
+  }
+  19.6319%{
+  background-position: 0 -12800px;
+  }
+  20.2454%{
+  background-position: 0 -13200px;
+  }
+  20.8589%{
+  background-position: 0 -13600px;
+  }
+  21.4724%{
+  background-position: 0 -14000px;
+  }
+  22.0859%{
+  background-position: 0 -14400px;
+  }
+  22.6994%{
+  background-position: 0 -14800px;
+  }
+  23.3129%{
+  background-position: 0 -15200px;
+  }
+  23.9264%{
+  background-position: 0 -15600px;
+  }
+  24.5399%{
+  background-position: 0 -16000px;
+  }
+  25.1534%{
+  background-position: 0 -16400px;
+  }
+  25.7669%{
+  background-position: 0 -16800px;
+  }
+  26.3804%{
+  background-position: 0 -17200px;
+  }
+  26.9939%{
+  background-position: 0 -17600px;
+  }
+  27.6074%{
+  background-position: 0 -18000px;
+  }
+  28.2209%{
+  background-position: 0 -18400px;
+  }
+  28.8344%{
+  background-position: 0 -18800px;
+  }
+  29.4479%{
+  background-position: 0 -19200px;
+  }
+  30.0613%{
+  background-position: 0 -19600px;
+  }
+  30.6748%{
+  background-position: 0 -20000px;
+  }
+  31.2883%{
+  background-position: 0 -20400px;
+  }
+  31.9018%{
+  background-position: 0 -20800px;
+  }
+  32.5153%{
+  background-position: 0 -21200px;
+  }
+  33.1288%{
+  background-position: 0 -21600px;
+  }
+  33.7423%{
+  background-position: 0 -22000px;
+  }
+  34.3558%{
+  background-position: 0 -22400px;
+  }
+  34.9693%{
+  background-position: 0 -22800px;
+  }
+  35.5828%{
+  background-position: 0 -23200px;
+  }
+  36.1963%{
+  background-position: 0 -23600px;
+  }
+  36.8098%{
+  background-position: 0 -24000px;
+  }
+  37.4233%{
+  background-position: 0 -24400px;
+  }
+  38.0368%{
+  background-position: 0 -24800px;
+  }
+  38.6503%{
+  background-position: 0 -25200px;
+  }
+  39.2638%{
+  background-position: 0 -25600px;
+  }
+  39.8773%{
+  background-position: 0 -26000px;
+  }
+  40.4908%{
+  background-position: 0 -26400px;
+  }
+  41.1043%{
+  background-position: 0 -26800px;
+  }
+  41.7178%{
+  background-position: 0 -27200px;
+  }
+  42.3313%{
+  background-position: 0 -27600px;
+  }
+  42.9448%{
+  background-position: 0 -28000px;
+  }
+  43.5583%{
+  background-position: 0 -28400px;
+  }
+  44.1718%{
+  background-position: 0 -28800px;
+  }
+  44.7853%{
+  background-position: 0 -29200px;
+  }
+  45.3988%{
+  background-position: 0 -29600px;
+  }
+  46.0123%{
+  background-position: 0 -30000px;
+  }
+  46.6258%{
+  background-position: 0 -30400px;
+  }
+  47.2393%{
+  background-position: 0 -30800px;
+  }
+  47.8528%{
+  background-position: 0 -31200px;
+  }
+  48.4663%{
+  background-position: 0 -31600px;
+  }
+  49.0798%{
+  background-position: 0 -32000px;
+  }
+  49.6933%{
+  background-position: 0 -32400px;
+  }
+  50.3067%{
+  background-position: 0 -32800px;
+  }
+  50.9202%{
+  background-position: 0 -33200px;
+  }
+  51.5337%{
+  background-position: 0 -33600px;
+  }
+  52.1472%{
+  background-position: 0 -34000px;
+  }
+  52.7607%{
+  background-position: 0 -34400px;
+  }
+  53.3742%{
+  background-position: 0 -34800px;
+  }
+  53.9877%{
+  background-position: 0 -35200px;
+  }
+  54.6012%{
+  background-position: 0 -35600px;
+  }
+  55.2147%{
+  background-position: 0 -36000px;
+  }
+  55.8282%{
+  background-position: 0 -36400px;
+  }
+  56.4417%{
+  background-position: 0 -36800px;
+  }
+  57.0552%{
+  background-position: 0 -37200px;
+  }
+  57.6687%{
+  background-position: 0 -37600px;
+  }
+  58.2822%{
+  background-position: 0 -38000px;
+  }
+  58.8957%{
+  background-position: 0 -38400px;
+  }
+  59.5092%{
+  background-position: 0 -38800px;
+  }
+  60.1227%{
+  background-position: 0 -39200px;
+  }
+  60.7362%{
+  background-position: 0 -39600px;
+  }
+  61.3497%{
+  background-position: 0 -40000px;
+  }
+  61.9632%{
+  background-position: 0 -40400px;
+  }
+  62.5767%{
+  background-position: 0 -40800px;
+  }
+  63.1902%{
+  background-position: 0 -41200px;
+  }
+  63.8037%{
+  background-position: 0 -41600px;
+  }
+  64.4172%{
+  background-position: 0 -42000px;
+  }
+  65.0307%{
+  background-position: 0 -42400px;
+  }
+  65.6442%{
+  background-position: 0 -42800px;
+  }
+  66.2577%{
+  background-position: 0 -43200px;
+  }
+  66.8712%{
+  background-position: 0 -43600px;
+  }
+  67.4847%{
+  background-position: 0 -44000px;
+  }
+  68.0982%{
+  background-position: 0 -44400px;
+  }
+  68.7117%{
+  background-position: 0 -44800px;
+  }
+  69.3252%{
+  background-position: 0 -45200px;
+  }
+  69.9387%{
+  background-position: 0 -45600px;
+  }
+  70.5521%{
+  background-position: 0 -46000px;
+  }
+  71.1656%{
+  background-position: 0 -46400px;
+  }
+  71.7791%{
+  background-position: 0 -46800px;
+  }
+  72.3926%{
+  background-position: 0 -47200px;
+  }
+  73.0061%{
+  background-position: 0 -47600px;
+  }
+  73.6196%{
+  background-position: 0 -48000px;
+  }
+  74.2331%{
+  background-position: 0 -48400px;
+  }
+  74.8466%{
+  background-position: 0 -48800px;
+  }
+  75.4601%{
+  background-position: 0 -49200px;
+  }
+  76.0736%{
+  background-position: 0 -49600px;
+  }
+  76.6871%{
+  background-position: 0 -50000px;
+  }
+  77.3006%{
+  background-position: 0 -50400px;
+  }
+  77.9141%{
+  background-position: 0 -50800px;
+  }
+  78.5276%{
+  background-position: 0 -51200px;
+  }
+  79.1411%{
+  background-position: 0 -51600px;
+  }
+  79.7546%{
+  background-position: 0 -52000px;
+  }
+  80.3681%{
+  background-position: 0 -52400px;
+  }
+  80.9816%{
+  background-position: 0 -52800px;
+  }
+  81.5951%{
+  background-position: 0 -53200px;
+  }
+  82.2086%{
+  background-position: 0 -53600px;
+  }
+  82.8221%{
+  background-position: 0 -54000px;
+  }
+  83.4356%{
+  background-position: 0 -54400px;
+  }
+  84.0491%{
+  background-position: 0 -54800px;
+  }
+  84.6626%{
+  background-position: 0 -55200px;
+  }
+  85.2761%{
+  background-position: 0 -55600px;
+  }
+  85.8896%{
+  background-position: 0 -56000px;
+  }
+  86.5031%{
+  background-position: 0 -56400px;
+  }
+  87.1166%{
+  background-position: 0 -56800px;
+  }
+  87.7301%{
+  background-position: 0 -57200px;
+  }
+  88.3436%{
+  background-position: 0 -57600px;
+  }
+  88.9571%{
+  background-position: 0 -58000px;
+  }
+  89.5706%{
+  background-position: 0 -58400px;
+  }
+  90.1840%{
+  background-position: 0 -58800px;
+  }
+  90.7975%{
+  background-position: 0 -59200px;
+  }
+  91.4110%{
+  background-position: 0 -59600px;
+  }
+  92.0245%{
+  background-position: 0 -60000px;
+  }
+  92.6380%{
+  background-position: 0 -60400px;
+  }
+  93.2515%{
+  background-position: 0 -60800px;
+  }
+  93.8650%{
+  background-position: 0 -61200px;
+  }
+  94.4785%{
+  background-position: 0 -61600px;
+  }
+  95.0920%{
+  background-position: 0 -62000px;
+  }
+  95.7055%{
+  background-position: 0 -62400px;
+  }
+  96.3190%{
+  background-position: 0 -62800px;
+  }
+  96.9325%{
+  background-position: 0 -63200px;
+  }
+  97.5460%{
+  background-position: 0 -63600px;
+  }
+  98.1595%{
+  background-position: 0 -64000px;
+  }
+  98.7730%{
+  background-position: 0 -64400px;
+  }
+  99.3865%{
+  background-position: 0 -64800px;
+  }
+  100.0000%{
+  background-position: 0 -65200px;
+  }
+      }
+
+      @-webkit-keyframes run {
+      0.0000%{
+  background-position: 0 0px;
+  }
+  0.6135%{
+  background-position: 0 -400px;
+  }
+  1.2270%{
+  background-position: 0 -800px;
+  }
+  1.8405%{
+  background-position: 0 -1200px;
+  }
+  2.4540%{
+  background-position: 0 -1600px;
+  }
+  3.0675%{
+  background-position: 0 -2000px;
+  }
+  3.6810%{
+  background-position: 0 -2400px;
+  }
+  4.2945%{
+  background-position: 0 -2800px;
+  }
+  4.9080%{
+  background-position: 0 -3200px;
+  }
+  5.5215%{
+  background-position: 0 -3600px;
+  }
+  6.1350%{
+  background-position: 0 -4000px;
+  }
+  6.7485%{
+  background-position: 0 -4400px;
+  }
+  7.3620%{
+  background-position: 0 -4800px;
+  }
+  7.9755%{
+  background-position: 0 -5200px;
+  }
+  8.5890%{
+  background-position: 0 -5600px;
+  }
+  9.2025%{
+  background-position: 0 -6000px;
+  }
+  9.8160%{
+  background-position: 0 -6400px;
+  }
+  10.4294%{
+  background-position: 0 -6800px;
+  }
+  11.0429%{
+  background-position: 0 -7200px;
+  }
+  11.6564%{
+  background-position: 0 -7600px;
+  }
+  12.2699%{
+  background-position: 0 -8000px;
+  }
+  12.8834%{
+  background-position: 0 -8400px;
+  }
+  13.4969%{
+  background-position: 0 -8800px;
+  }
+  14.1104%{
+  background-position: 0 -9200px;
+  }
+  14.7239%{
+  background-position: 0 -9600px;
+  }
+  15.3374%{
+  background-position: 0 -10000px;
+  }
+  15.9509%{
+  background-position: 0 -10400px;
+  }
+  16.5644%{
+  background-position: 0 -10800px;
+  }
+  17.1779%{
+  background-position: 0 -11200px;
+  }
+  17.7914%{
+  background-position: 0 -11600px;
+  }
+  18.4049%{
+  background-position: 0 -12000px;
+  }
+  19.0184%{
+  background-position: 0 -12400px;
+  }
+  19.6319%{
+  background-position: 0 -12800px;
+  }
+  20.2454%{
+  background-position: 0 -13200px;
+  }
+  20.8589%{
+  background-position: 0 -13600px;
+  }
+  21.4724%{
+  background-position: 0 -14000px;
+  }
+  22.0859%{
+  background-position: 0 -14400px;
+  }
+  22.6994%{
+  background-position: 0 -14800px;
+  }
+  23.3129%{
+  background-position: 0 -15200px;
+  }
+  23.9264%{
+  background-position: 0 -15600px;
+  }
+  24.5399%{
+  background-position: 0 -16000px;
+  }
+  25.1534%{
+  background-position: 0 -16400px;
+  }
+  25.7669%{
+  background-position: 0 -16800px;
+  }
+  26.3804%{
+  background-position: 0 -17200px;
+  }
+  26.9939%{
+  background-position: 0 -17600px;
+  }
+  27.6074%{
+  background-position: 0 -18000px;
+  }
+  28.2209%{
+  background-position: 0 -18400px;
+  }
+  28.8344%{
+  background-position: 0 -18800px;
+  }
+  29.4479%{
+  background-position: 0 -19200px;
+  }
+  30.0613%{
+  background-position: 0 -19600px;
+  }
+  30.6748%{
+  background-position: 0 -20000px;
+  }
+  31.2883%{
+  background-position: 0 -20400px;
+  }
+  31.9018%{
+  background-position: 0 -20800px;
+  }
+  32.5153%{
+  background-position: 0 -21200px;
+  }
+  33.1288%{
+  background-position: 0 -21600px;
+  }
+  33.7423%{
+  background-position: 0 -22000px;
+  }
+  34.3558%{
+  background-position: 0 -22400px;
+  }
+  34.9693%{
+  background-position: 0 -22800px;
+  }
+  35.5828%{
+  background-position: 0 -23200px;
+  }
+  36.1963%{
+  background-position: 0 -23600px;
+  }
+  36.8098%{
+  background-position: 0 -24000px;
+  }
+  37.4233%{
+  background-position: 0 -24400px;
+  }
+  38.0368%{
+  background-position: 0 -24800px;
+  }
+  38.6503%{
+  background-position: 0 -25200px;
+  }
+  39.2638%{
+  background-position: 0 -25600px;
+  }
+  39.8773%{
+  background-position: 0 -26000px;
+  }
+  40.4908%{
+  background-position: 0 -26400px;
+  }
+  41.1043%{
+  background-position: 0 -26800px;
+  }
+  41.7178%{
+  background-position: 0 -27200px;
+  }
+  42.3313%{
+  background-position: 0 -27600px;
+  }
+  42.9448%{
+  background-position: 0 -28000px;
+  }
+  43.5583%{
+  background-position: 0 -28400px;
+  }
+  44.1718%{
+  background-position: 0 -28800px;
+  }
+  44.7853%{
+  background-position: 0 -29200px;
+  }
+  45.3988%{
+  background-position: 0 -29600px;
+  }
+  46.0123%{
+  background-position: 0 -30000px;
+  }
+  46.6258%{
+  background-position: 0 -30400px;
+  }
+  47.2393%{
+  background-position: 0 -30800px;
+  }
+  47.8528%{
+  background-position: 0 -31200px;
+  }
+  48.4663%{
+  background-position: 0 -31600px;
+  }
+  49.0798%{
+  background-position: 0 -32000px;
+  }
+  49.6933%{
+  background-position: 0 -32400px;
+  }
+  50.3067%{
+  background-position: 0 -32800px;
+  }
+  50.9202%{
+  background-position: 0 -33200px;
+  }
+  51.5337%{
+  background-position: 0 -33600px;
+  }
+  52.1472%{
+  background-position: 0 -34000px;
+  }
+  52.7607%{
+  background-position: 0 -34400px;
+  }
+  53.3742%{
+  background-position: 0 -34800px;
+  }
+  53.9877%{
+  background-position: 0 -35200px;
+  }
+  54.6012%{
+  background-position: 0 -35600px;
+  }
+  55.2147%{
+  background-position: 0 -36000px;
+  }
+  55.8282%{
+  background-position: 0 -36400px;
+  }
+  56.4417%{
+  background-position: 0 -36800px;
+  }
+  57.0552%{
+  background-position: 0 -37200px;
+  }
+  57.6687%{
+  background-position: 0 -37600px;
+  }
+  58.2822%{
+  background-position: 0 -38000px;
+  }
+  58.8957%{
+  background-position: 0 -38400px;
+  }
+  59.5092%{
+  background-position: 0 -38800px;
+  }
+  60.1227%{
+  background-position: 0 -39200px;
+  }
+  60.7362%{
+  background-position: 0 -39600px;
+  }
+  61.3497%{
+  background-position: 0 -40000px;
+  }
+  61.9632%{
+  background-position: 0 -40400px;
+  }
+  62.5767%{
+  background-position: 0 -40800px;
+  }
+  63.1902%{
+  background-position: 0 -41200px;
+  }
+  63.8037%{
+  background-position: 0 -41600px;
+  }
+  64.4172%{
+  background-position: 0 -42000px;
+  }
+  65.0307%{
+  background-position: 0 -42400px;
+  }
+  65.6442%{
+  background-position: 0 -42800px;
+  }
+  66.2577%{
+  background-position: 0 -43200px;
+  }
+  66.8712%{
+  background-position: 0 -43600px;
+  }
+  67.4847%{
+  background-position: 0 -44000px;
+  }
+  68.0982%{
+  background-position: 0 -44400px;
+  }
+  68.7117%{
+  background-position: 0 -44800px;
+  }
+  69.3252%{
+  background-position: 0 -45200px;
+  }
+  69.9387%{
+  background-position: 0 -45600px;
+  }
+  70.5521%{
+  background-position: 0 -46000px;
+  }
+  71.1656%{
+  background-position: 0 -46400px;
+  }
+  71.7791%{
+  background-position: 0 -46800px;
+  }
+  72.3926%{
+  background-position: 0 -47200px;
+  }
+  73.0061%{
+  background-position: 0 -47600px;
+  }
+  73.6196%{
+  background-position: 0 -48000px;
+  }
+  74.2331%{
+  background-position: 0 -48400px;
+  }
+  74.8466%{
+  background-position: 0 -48800px;
+  }
+  75.4601%{
+  background-position: 0 -49200px;
+  }
+  76.0736%{
+  background-position: 0 -49600px;
+  }
+  76.6871%{
+  background-position: 0 -50000px;
+  }
+  77.3006%{
+  background-position: 0 -50400px;
+  }
+  77.9141%{
+  background-position: 0 -50800px;
+  }
+  78.5276%{
+  background-position: 0 -51200px;
+  }
+  79.1411%{
+  background-position: 0 -51600px;
+  }
+  79.7546%{
+  background-position: 0 -52000px;
+  }
+  80.3681%{
+  background-position: 0 -52400px;
+  }
+  80.9816%{
+  background-position: 0 -52800px;
+  }
+  81.5951%{
+  background-position: 0 -53200px;
+  }
+  82.2086%{
+  background-position: 0 -53600px;
+  }
+  82.8221%{
+  background-position: 0 -54000px;
+  }
+  83.4356%{
+  background-position: 0 -54400px;
+  }
+  84.0491%{
+  background-position: 0 -54800px;
+  }
+  84.6626%{
+  background-position: 0 -55200px;
+  }
+  85.2761%{
+  background-position: 0 -55600px;
+  }
+  85.8896%{
+  background-position: 0 -56000px;
+  }
+  86.5031%{
+  background-position: 0 -56400px;
+  }
+  87.1166%{
+  background-position: 0 -56800px;
+  }
+  87.7301%{
+  background-position: 0 -57200px;
+  }
+  88.3436%{
+  background-position: 0 -57600px;
+  }
+  88.9571%{
+  background-position: 0 -58000px;
+  }
+  89.5706%{
+  background-position: 0 -58400px;
+  }
+  90.1840%{
+  background-position: 0 -58800px;
+  }
+  90.7975%{
+  background-position: 0 -59200px;
+  }
+  91.4110%{
+  background-position: 0 -59600px;
+  }
+  92.0245%{
+  background-position: 0 -60000px;
+  }
+  92.6380%{
+  background-position: 0 -60400px;
+  }
+  93.2515%{
+  background-position: 0 -60800px;
+  }
+  93.8650%{
+  background-position: 0 -61200px;
+  }
+  94.4785%{
+  background-position: 0 -61600px;
+  }
+  95.0920%{
+  background-position: 0 -62000px;
+  }
+  95.7055%{
+  background-position: 0 -62400px;
+  }
+  96.3190%{
+  background-position: 0 -62800px;
+  }
+  96.9325%{
+  background-position: 0 -63200px;
+  }
+  97.5460%{
+  background-position: 0 -63600px;
+  }
+  98.1595%{
+  background-position: 0 -64000px;
+  }
+  98.7730%{
+  background-position: 0 -64400px;
+  }
+  99.3865%{
+  background-position: 0 -64800px;
+  }
+  100.0000%{
+  background-position: 0 -65200px;
+  }
+}
